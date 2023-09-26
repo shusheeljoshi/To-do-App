@@ -28,10 +28,15 @@
 
         let addItem = (inputBox) => {
             let listItem = document.createElement("li");
-            listItem.innerHTML = `${inputBox}<i><i>`;
+            listItem.innerHTML = `${inputBox}<i></i>`;
+
+                listItem.addEventListner("click", function(){
+                    this.classList.toggle('done');
+                })
 
                 list.appendChild(listItem);
         }
+ 
 
     </script>
     
